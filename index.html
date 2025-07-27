@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>文化マップ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+    body { margin: 0; padding: 0; }
+    #map { height: 100vh; }
+  </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">文化マップデモ</h2>
+<div id="map"></div>
+
+<script>
+  var map = L.map('map').setView([35.0116, 135.7681], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.marker([35.0037, 135.7788]).addTo(map)
+    .bindPopup('<b>清水寺</b><br><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Kiyomizu-dera_2009.jpg" width="150"><br>京都の人気スポット');
+</script>
+
+</body>
+</html>
