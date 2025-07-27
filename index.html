@@ -14,17 +14,17 @@
 </head>
 <body>
 
-<h2 style="text-align:center;">文化マップデモ</h2>
+<h2 style="text-align:center;">文化マップ：金閣寺</h2>
 <div id="map"></div>
 
 <script>
-  var map = L.map('map').setView([35.0116, 135.7681], 13);
+  var map = L.map('map').setView([35.03966, 135.72835], 15);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  L.marker([35.0037, 135.7788]).addTo(map)
-    .bindPopup('<b>清水寺</b><br><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Kiyomizu-dera_2009.jpg" width="150"><br>京都の人気スポット');
+  L.marker([35.03966, 135.72835]).addTo(map)
+    .bindPopup('<b>金閣寺</b><br><img src="kinkaku.jpg" width="150"><br>池に映る金色の寺がとても美しいです。');
 </script>
 
 </body>
